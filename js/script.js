@@ -10,7 +10,7 @@ console.log('js ok');
 // ask for the name
 const uName = document.getElementById('name').value;
 console.log(uName);
-let DisplayUName = document.getElementById('username')
+let displayUName = document.getElementById('username')
 
 // ask the DISTANCE
 const distance = document.getElementById('km').value;
@@ -19,9 +19,11 @@ console.log(distance);
 // declaring price per km
 const pricePerKm = 0.21;
 
+// declaring age
+const age = document.getElementById('age').value
+
 // calculate pre discount price
-let DisplayPrice = document.getElementById('price')
-console.log(price);
+let displayPrice = document.getElementById('price')
 
 // bottone calcola
 const btnGenerate = document.querySelector('button')
@@ -32,28 +34,53 @@ const displayCabin = document.getElementById('cabin')
 // preparo costante per stampare in pagina il numero di cabina random
 const displayCp = document.getElementById('cp')
 
+// display type of ticket
+const displayTicket = document.getElementById('ticket')
+
+
 btnGenerate.addEventListener('click', function() {
+    //
     // STAMPARE PRICE IN CASELLA PREZZO
     const uName = document.getElementById('name').value;
     console.log(uName);
-    DisplayUName.append(uName)
+    displayUName.innerHTML = uName;
 
     // prelevare dato distanza
     const distance = document.getElementById('km').value;
-    console.log(distance);
 
-    // calcolare costo della distanza percosa e stamparlo in pagina
-    const price = pricePerKm * distance;
-    DisplayPrice.append(price);
-    console.log(price);
+
 
     // NUMERO CABINA
     const cabin = Math.floor(Math.random() * 15 + 1);
-    displayCabin.append(cabin);
+    displayCabin.innerHTML = cabin;
 
     // NUMERO CP
     const cp = Math.floor(Math.random() * 5000 + 1);
-    displayCp.append(cp);
+    displayCp.innerHTML = cp;
+
+    const age = document.getElementById('age');
+    console.log(age);
+
+    // controllo età passeggero
+    if (age.value == 3) {
+        let price = (pricePerKm * distance * 0.6).toFixed(2);
+        displayPrice.innerHTML = price;
+        console.log(price);
+        displayTicket.innerHTML = 'Biglietto over 65';
+    } else if (age.value == 1) {
+        let price = (pricePerKm * distance * 0.8).toFixed(2);
+        displayPrice.innerHTML = price;
+        console.log(price);
+        displayTicket.innerHTML = 'Biglietto over under 18';
+
+    } else {
+        let price = (pricePerKm * distance).toFixed(2);
+        displayPrice.innerHTML = price;
+        displayTicket.innerHTML = 'Biglietto standard';
+
+    }
+
+
 })
 
 
