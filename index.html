@@ -15,15 +15,15 @@
         <form id="form" class="row gy-2 gx-3 align-items-center flex-column">
             <div class="col-auto">
                 <label for="autoSizingInput">Nome e Cognome</label>
-                <input type="text" class="form-control mb-4" id="name" placeholder="jonh Snow">
+                <input type="text" class="form-control mb-4" id="name" placeholder="jonh Snow" required>
             </div>
             <div class="col-auto">
                 <label for="autoSizingInput">Km da percorrere</label>
-                <input type="text" class="form-control mb-4" id="km" placeholder="10">
+                <input type="text" class="form-control mb-4" id="km" placeholder="10" required>
             </div>
             <div class="col-auto">
                 <label for="autoSizingSelect">Fascia d'età</label>
-                <select class="form-select mb-4" id="autoSizingSelect">
+                <select class="form-select mb-4" id="age" required>
                     <option value="0" selected>scegli...</option>
                     <option value="1">Minorenne</option>
                     <option value="2">18-64</option>
@@ -34,7 +34,7 @@
                 <div class="col-6">
                     <button type="submit" class="btn btn-light">Genera</button>
                 </div>
-                <div class="col-6">
+                <div id="undo" class="col-6">
                     <button type="submit" class="btn btn-light">Annulla</button>
                 </div>
             </div>

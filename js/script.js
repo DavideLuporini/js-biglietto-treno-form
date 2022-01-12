@@ -8,7 +8,7 @@
 console.log('js ok');
 
 // ask for the prefered distance
-const distance = document.querySelector('input').value;
+const distance = document.getElementById('name').value;
 console.log(distance);
 
 // ask the age
