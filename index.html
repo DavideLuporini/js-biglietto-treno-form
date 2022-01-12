@@ -11,42 +11,46 @@
 </head>
 
 <body>
-    <div class="container-inputs text-align-center justify-content-center">
-        <div id="form" class="row gy-2 gx-3 align-items-center flex-column">
-            <div class="col-auto">
-                <label for="autoSizingInput">Nome e Cognome</label>
-                <input type="text" class="form-control mb-4" id="name" placeholder="jonh Snow" value="" required>
-            </div>
-            <div class="col-auto">
-                <label for="autoSizingInput">Km da percorrere</label>
-                <input type="number" class="form-control mb-4" id="km" value="" placeholder="10" required>
-            </div>
-            <div class="col-auto">
-                <label for="autoSizingSelect">Fascia d'età</label>
-                <select class="form-select mb-4" id="age" required>
+    <main>
+        <section class=" bg-main-container">
+            <div class="container-inputs text-align-center justify-content-center">
+                <div id="form" class="row gy-2 gx-3 align-items-center flex-column">
+                    <div class="col-auto">
+                        <label class="text-title-light" for="autoSizingInput">Nome e Cognome</label>
+                        <input type="text" class="form-control mb-4" id="name" placeholder="jonh Snow" value="" required>
+                    </div>
+                    <div class="col-auto">
+                        <label class="text-title-light" for="autoSizingInput">Km da percorrere</label>
+                        <input type="number" class="form-control mb-4" id="km" value="" placeholder="10" required>
+                    </div>
+                    <div class="col-auto">
+                        <label class="text-title-light" for="autoSizingSelect">Fascia d'età</label>
+                        <select class="form-select mb-4" id="age" required>
                     <option value="0" selected>scegli...</option>
                     <option value="1">Minorenne</option>
                     <option value="2">18-64</option>
                     <option value="3">65+</option>
                 </select>
-            </div>
-            <div class="row text-align-center justify-content-center">
-                <div class="col-6">
-                    <button type="submit" class="btn btn-light">Genera</button>
+                    </div>
+                    <div class="row text-align-center justify-content-center">
+                        <div class="col-6">
+                            <button type="submit" class="btn btn-light">Genera</button>
+                        </div>
+                        <div id="undo" class="col-6">
+                            <button type="submit" class="btn btn-light">Annulla</button>
+                        </div>
+                    </div>
                 </div>
-                <div id="undo" class="col-6">
-                    <button type="submit" class="btn btn-light">Annulla</button>
-                </div>
             </div>
-        </div>
-    </div>
+        </section>
+    </main>
 
     <footer class="d-flex align-items-center">
         <div class="container footer-output">
-            <div class="row h-100">
+            <div class="row h-100 text-center border-black">
                 <div class="col-4 bgc-black">
                     <div id="userdetails">
-                        <div class=title>
+                        <div class="title text-title-light">
                             NOME E COGNOME
                         </div>
                         <div id="username">
@@ -55,7 +59,7 @@
                     </div>
                 </div>
                 <div class="col-2 flex-column">
-                    <div class="title">
+                    <div class="text-title-dark">
                         TIPO DI BIGLIETTO
                     </div>
                     <div id="ticket">
@@ -63,7 +67,7 @@
                     </div>
                 </div>
                 <div class="col-2 flex-column">
-                    <div class=title>
+                    <div class="text-title-dark">
                         NUMERO VAGONE
                     </div>
                     <div id="cabin">
@@ -71,7 +75,7 @@
                     </div>
                 </div>
                 <div class="col-2 flex-column">
-                    <div class="title">
+                    <div class="text-title-dark">
                         CODICE CP
                     </div>
                     <div id="cp">
@@ -79,7 +83,7 @@
                     </div>
                 </div>
                 <div class="col-2 flex-column">
-                    <div class="title">
+                    <div class="text-title-dark">
                         PRICE
                     </div>
                     <div id="price">
@@ -90,6 +94,7 @@
         </div>
 
     </footer>
+
 
     <script src="js/script.js"></script>
 </body>

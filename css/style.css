@@ -2,8 +2,8 @@
     width: 400px;
     padding: 50px;
     display: flex;
-    background-color: red;
-    margin: 50px auto;
+    background-color: #264653;
+    margin: 0px auto;
     border: 3px solid black;
     border-radius: 20px;
 }
@@ -11,19 +11,40 @@
 footer {
     height: 200px;
     width: 100%;
-    background-color: red;
+    background-color: #003049;
 }
 
 .footer-output {
     height: 75%;
     width: 75%;
     margin: 0 auto;
-    background-color: rgb(211, 135, 135);
+    background-color: #2a9d8f;
     border-radius: 25px;
 }
 
 .bgc-black {
-    background-color: darkred;
-    border: 3px solid black;
+    background-color: #264653;
+    border: 5px solid black;
+    border-radius: 25px;
+}
+
+.bg-main-container {
+    background-image: url(../img/360_F_454028890_YAM5KPK9MmuSRG9ZrffVLIeuApja5DT2.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center right;
+    padding: 50px;
+}
+
+.text-title-light {
+    color: #e9c46a;
+}
+
+.text-title-dark {
+    color: black;
+}
+
+.border-black {
+    border: 1px solid black;
     border-radius: 25px;
 }

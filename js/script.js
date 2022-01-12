@@ -41,7 +41,7 @@ const displayTicket = document.getElementById('ticket')
 // bottone genera
 btnGenerate.addEventListener('click', function() {
     // validazione dati
-    if (!uName && distance <= 0 && age == 0) {
+    if (!uName && distance > 0 && age == 0) {
         alert("Fai attenzione! Uno dei dati non è stato inserito!");
     } else {
         // STAMPARE PRICE IN CASELLA PREZZO
