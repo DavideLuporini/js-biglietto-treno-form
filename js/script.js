@@ -26,20 +26,34 @@ console.log(price);
 // bottone calcola
 const btnGenerate = document.querySelector('button')
 
+// preparo costante per stampare in pagina il numero di cabina random
+const displayCabin = document.getElementById('cabin')
+
+// preparo costante per stampare in pagina il numero di cabina random
+const displayCp = document.getElementById('cp')
+
 btnGenerate.addEventListener('click', function() {
     // STAMPARE PRICE IN CASELLA PREZZO
     const uName = document.getElementById('name').value;
     console.log(uName);
     DisplayUName.append(uName)
 
+    // prelevare dato distanza
     const distance = document.getElementById('km').value;
-    console.log(distance + ' km');
+    console.log(distance);
 
+    // calcolare costo della distanza percosa e stamparlo in pagina
     const price = pricePerKm * distance;
-    DisplayPrice.append(price)
+    DisplayPrice.append(price);
     console.log(price);
 
+    // NUMERO CABINA
+    const cabin = Math.floor(Math.random() * 15 + 1);
+    displayCabin.append(cabin);
 
+    // NUMERO CP
+    const cp = Math.floor(Math.random() * 5000 + 1);
+    displayCp.append(cp);
 })
 
 
