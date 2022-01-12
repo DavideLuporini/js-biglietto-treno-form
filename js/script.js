@@ -77,15 +77,15 @@ btnGenerate.addEventListener('click', function() {
         let price = (pricePerKm * distance).toFixed(2);
         displayPrice.innerHTML = price;
         displayTicket.innerHTML = 'Biglietto standard';
-
     }
-
-
 })
 
 
 
-
-
 // bottone annulla
-const btnUndo = document.getElementById('undo')
+const btnUndo = document.getElementById('undo');
+
+btnUndo.addEventListener('click', function() {
+
+    window.location.reload()
+})
