@@ -6,12 +6,50 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Train</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
+    <div class="container-inputs text-align-center justify-content-center">
+        <form id="form" class="row gy-2 gx-3 align-items-center flex-column">
+            <div class="col-auto">
+                <label for="autoSizingInput">Nome e Cognome</label>
+                <input type="text" class="form-control mb-4" id="autoSizingInput" placeholder="jonh Snow">
+            </div>
+            <div class="col-auto">
+                <label for="autoSizingInput">Km da percorrere</label>
+                <input type="text" class="form-control mb-4" id="autoSizingInput" placeholder="10">
+            </div>
+            <div class="col-auto">
+                <label for="autoSizingSelect">Fascia d'età</label>
+                <select class="form-select mb-4" id="autoSizingSelect">
+                    <option value="0" selected>scegli...</option>
+                    <option value="1">Minorenne</option>
+                    <option value="2">18-64</option>
+                    <option value="3">65+</option>
+                </select>
+            </div>
+            <div class="row text-align-center justify-content-center">
+                <div class="col-6">
+                    <button type="submit" class="btn btn-light">Genera</button>
+                </div>
+                <div class="col-6">
+                    <button type="submit" class="btn btn-light">Annulla</button>
+                </div>
+            </div>
+        </form>
+    </div>
 
+    <footer class="d-flex align-items-center">
+        <div class="container footer-output">
+            <div class="row h-100">
+                <div class="col-3 bgc-black">dasadsad</div>
+                <div class="col-auto"></div>
+            </div>
+        </div>
 
+    </footer>
 
     <script src="js/script.js"></script>
 </body>

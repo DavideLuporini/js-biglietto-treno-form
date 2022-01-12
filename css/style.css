@@ -1,0 +1,29 @@
+.container-inputs {
+    width: 400px;
+    padding: 50px;
+    display: flex;
+    background-color: red;
+    margin: 50px auto;
+    border: 3px solid black;
+    border-radius: 20px;
+}
+
+footer {
+    height: 200px;
+    width: 100%;
+    background-color: red;
+}
+
+.footer-output {
+    height: 75%;
+    width: 75%;
+    margin: 0 auto;
+    background-color: rgb(211, 135, 135);
+    border-radius: 25px;
+}
+
+.bgc-black {
+    background-color: darkred;
+    border: 3px solid black;
+    border-radius: 25px;
+}
