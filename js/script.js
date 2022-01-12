@@ -38,45 +38,49 @@ const displayCp = document.getElementById('cp')
 const displayTicket = document.getElementById('ticket')
 
 
+// bottone genera
 btnGenerate.addEventListener('click', function() {
-    //
-    // STAMPARE PRICE IN CASELLA PREZZO
-    const uName = document.getElementById('name').value;
-    console.log(uName);
-    displayUName.innerHTML = uName;
-
-    // prelevare dato distanza
-    const distance = document.getElementById('km').value;
-
-
-
-    // NUMERO CABINA
-    const cabin = Math.floor(Math.random() * 15 + 1);
-    displayCabin.innerHTML = cabin;
-
-    // NUMERO CP
-    const cp = Math.floor(Math.random() * 5000 + 1);
-    displayCp.innerHTML = cp;
-
-    const age = document.getElementById('age');
-    console.log(age);
-
-    // controllo età passeggero
-    if (age.value == 3) {
-        let price = (pricePerKm * distance * 0.6).toFixed(2);
-        displayPrice.innerHTML = price;
-        console.log(price);
-        displayTicket.innerHTML = 'Biglietto over 65';
-    } else if (age.value == 1) {
-        let price = (pricePerKm * distance * 0.8).toFixed(2);
-        displayPrice.innerHTML = price;
-        console.log(price);
-        displayTicket.innerHTML = 'Biglietto over under 18';
-
+    // validazione dati
+    if (!uName && distance <= 0 && age == 0) {
+        alert("Fai attenzione! Uno dei dati non è stato inserito!");
     } else {
-        let price = (pricePerKm * distance).toFixed(2);
-        displayPrice.innerHTML = price;
-        displayTicket.innerHTML = 'Biglietto standard';
+        // STAMPARE PRICE IN CASELLA PREZZO
+        const uName = document.getElementById('name').value;
+        console.log(uName);
+        displayUName.innerHTML = uName;
+
+        // prelevare dato distanza
+        const distance = document.getElementById('km').value;
+
+        // NUMERO CABINA
+        const cabin = Math.floor(Math.random() * 15 + 1);
+        displayCabin.innerHTML = cabin;
+
+        // NUMERO CP
+        const cp = Math.floor(Math.random() * 5000 + 1);
+        displayCp.innerHTML = cp;
+
+        const age = document.getElementById('age');
+        console.log(age);
+
+        // controllo età passeggero
+        if (age.value == 3) {
+            let price = (pricePerKm * distance * 0.6).toFixed(2);
+            displayPrice.innerHTML = price;
+            console.log(price);
+            displayTicket.innerHTML = 'Biglietto over 65';
+        } else if (age.value == 1) {
+            let price = (pricePerKm * distance * 0.8).toFixed(2);
+            displayPrice.innerHTML = price;
+            console.log(price);
+            displayTicket.innerHTML = 'Biglietto over under 18';
+
+        } else {
+            let price = (pricePerKm * distance).toFixed(2);
+            displayPrice.innerHTML = price;
+            displayTicket.innerHTML = 'Biglietto standard';
+        }
+
     }
 })
 
