@@ -7,27 +7,39 @@
 
 console.log('js ok');
 
-// ask for the prefered distance
-const distance = document.getElementById('name').value;
-console.log(distance);
+// ask for the name
+const uName = document.getElementById('name').value;
+console.log(uName);
 
-// ask the age
-const age = document.getElementById('age').value;
-console.log(age);
+// ask the DISTANCE
+const distance = document.getElementById('km').value;
+console.log(distance);
 
 // declaring price per km
 const pricePerKm = 0.21;
 
-// calculate pre discount price
-const price = (distance * pricePerKm);
-console.log(price);
+// // calculate pre discount price
+// const price = (distance * pricePerKm);
+// console.log(price);
 
 // bottone calcola
 const btnGenerate = document.querySelector('button')
 
+btnGenerate.addEventListener('click', function() {
+    // STAMPARE PRICE IN CASELLA PREZZO
+    const uName = document.getElementById('name').value;
+    console.log(uName);
+
+    const distance = document.getElementById('km').value;
+    console.log(distance + ' km');
+
+    const price = pricePerKm * distance;
+    console.log(price)
+})
+
+
+
+
+
 // bottone annulla
 const btnUndo = document.getElementById('undo')
-
-btnGenerate.addEventListener('click', function() {
-
-})

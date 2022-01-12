@@ -12,14 +12,14 @@
 
 <body>
     <div class="container-inputs text-align-center justify-content-center">
-        <form id="form" class="row gy-2 gx-3 align-items-center flex-column">
+        <div id="form" class="row gy-2 gx-3 align-items-center flex-column">
             <div class="col-auto">
                 <label for="autoSizingInput">Nome e Cognome</label>
-                <input type="text" class="form-control mb-4" id="name" placeholder="jonh Snow" required>
+                <input type="text" class="form-control mb-4" id="name" placeholder="jonh Snow" value="" required>
             </div>
             <div class="col-auto">
                 <label for="autoSizingInput">Km da percorrere</label>
-                <input type="text" class="form-control mb-4" id="km" placeholder="10" required>
+                <input type="number" class="form-control mb-4" id="km" value="" placeholder="10" required>
             </div>
             <div class="col-auto">
                 <label for="autoSizingSelect">Fascia d'età</label>
@@ -38,14 +38,54 @@
                     <button type="submit" class="btn btn-light">Annulla</button>
                 </div>
             </div>
-        </form>
+        </div>
     </div>
 
     <footer class="d-flex align-items-center">
         <div class="container footer-output">
             <div class="row h-100">
-                <div class="col-3 bgc-black">dasadsad</div>
-                <div class="col-auto"></div>
+                <div class="col-4 bgc-black">
+                    <div id="userdetails">
+                        <div class=title>
+                            NOME E COGNOME
+                        </div>
+                        <div id="username">
+                            sadadsadsa
+                        </div>
+                    </div>
+                </div>
+                <div class="col-2 flex-column">
+                    <div class="title">
+                        asdsdas
+                    </div>
+                    <div id="discount">
+                        asdsdas
+                    </div>
+                </div>
+                <div class="col-2 flex-column">
+                    <div class=title>
+                        sadadsadsa
+                    </div>
+                    <div id="cabin">
+                        sadadsadsa
+                    </div>
+                </div>
+                <div class="col-2 flex-column">
+                    <div class="title">
+                        fsadsad
+                    </div>
+                    <div id="cp">
+                        fsadsad
+                    </div>
+                </div>
+                <div class="col-2 flex-column">
+                    <div class="title">
+                        asdadad
+                    </div>
+                    <div id="price">
+                        asdadad
+                    </div>
+                </div>
             </div>
         </div>
 
